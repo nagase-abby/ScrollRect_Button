@@ -7,12 +7,16 @@ using UnityEngine.UI;
 
 public class CustomScrollRect : ScrollRect
 {
+    private List<RaycastResult> _raycastResults = new List<RaycastResult>();
+
+    private GameObject _lastSelectedObj = null;
+
     public override void OnInitializePotentialDrag(PointerEventData eventData)
     {
         var lastObj = EventSystem.current.currentSelectedGameObject;
 
         base.OnInitializePotentialDrag(eventData);
-        if (!checkValidEvent(eventData)) return;
+        if (!CheckValidEvent(eventData)) return;
 
         // 直前の選択オブジェクトを記憶
         _lastSelectedObj = null;
@@ -25,22 +29,32 @@ public class CustomScrollRect : ScrollRect
     public override void OnEndDrag(PointerEventData eventData)
     {
         base.OnEndDrag(eventData);
-        if (!checkValidEvent(eventData)) return;
+        if (!CheckValidEvent(eventData)) return;
 
         // 直前の選択オブジェクトがあればイベント通知
         if (_lastSelectedObj != null)
         {
             EventSystem.current.RaycastAll(eventData, _raycastResults);
-            var raycast = getFirstRaycast(_raycastResults);
+            var raycast = GetFirstRaycast(_raycastResults);
             _raycastResults.Clear();
 
-            notifyClickEvent(raycast, eventData);
+            NotifyClickEvent(raycast, eventData);
         }
 
         _lastSelectedObj = null;
     }
 
-    protected static RaycastResult getFirstRaycast(IEnumerable<RaycastResult> results)
+    private bool CheckValidEvent(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            return false;
+        }
+
+        return IsActive();
+    }
+
+    private RaycastResult GetFirstRaycast(IEnumerable<RaycastResult> results)
     {
         foreach (var result in results)
         {
@@ -52,7 +66,7 @@ public class CustomScrollRect : ScrollRect
         return new RaycastResult();
     }
 
-    protected void notifyClickEvent(RaycastResult raycast, PointerEventData original)
+    private void NotifyClickEvent(RaycastResult raycast, PointerEventData original)
     {
         if (_lastSelectedObj == null) return;
 
@@ -65,7 +79,7 @@ public class CustomScrollRect : ScrollRect
         if (handler != _lastSelectedObj) return;
 
         // 通知用のイベントデータ生成
-        var eventData = copyEventData(original);
+        var eventData = CopyEventData(original);
         eventData.pointerCurrentRaycast = raycast;
         eventData.pointerPressRaycast = raycast;
         eventData.pointerPress = handler;
@@ -76,17 +90,7 @@ public class CustomScrollRect : ScrollRect
         ExecuteEvents.Execute(eventData.pointerPress, eventData, ExecuteEvents.pointerClickHandler);
     }
 
-    protected bool checkValidEvent(PointerEventData eventData)
-    {
-        if (eventData.button != PointerEventData.InputButton.Left)
-        {
-            return false;
-        }
-
-        return IsActive();
-    }
-
-    protected PointerEventData copyEventData(PointerEventData original)
+    private PointerEventData CopyEventData(PointerEventData original)
     {
         return new PointerEventData(EventSystem.current)
         {
@@ -111,8 +115,4 @@ public class CustomScrollRect : ScrollRect
             useDragThreshold = original.useDragThreshold,
         };
     }
-
-    private static List<RaycastResult> _raycastResults = new List<RaycastResult>();
-
-    private GameObject _lastSelectedObj = null;
 }
