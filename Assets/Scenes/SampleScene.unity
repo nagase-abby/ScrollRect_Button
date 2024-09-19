@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 23101965}
   - component: {fileID: 23101964}
   - component: {fileID: 23101963}
-  - component: {fileID: 23101961}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -163,18 +162,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -180}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &23101961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23101959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &23101963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +475,6 @@ GameObject:
   - component: {fileID: 320677791}
   - component: {fileID: 320677790}
   - component: {fileID: 320677789}
-  - component: {fileID: 320677787}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -516,18 +502,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -1090}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &320677787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320677785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &320677789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +698,6 @@ GameObject:
   - component: {fileID: 507197217}
   - component: {fileID: 507197216}
   - component: {fileID: 507197215}
-  - component: {fileID: 507197213}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -752,18 +725,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -570}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &507197213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507197211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &507197215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,7 +1337,6 @@ GameObject:
   - component: {fileID: 980469435}
   - component: {fileID: 980469434}
   - component: {fileID: 980469433}
-  - component: {fileID: 980469431}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -1404,18 +1364,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -700}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &980469431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980469429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &980469433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,7 +1458,6 @@ GameObject:
   - component: {fileID: 996255570}
   - component: {fileID: 996255569}
   - component: {fileID: 996255568}
-  - component: {fileID: 996255571}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1620,18 +1567,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996255566}
   m_CullTransparentMesh: 1
---- !u!114 &996255571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996255566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1001324988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,7 +1713,6 @@ GameObject:
   - component: {fileID: 1026756696}
   - component: {fileID: 1026756695}
   - component: {fileID: 1026756694}
-  - component: {fileID: 1026756692}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -1806,18 +1740,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -830}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1026756692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026756690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1026756694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,7 +1834,6 @@ GameObject:
   - component: {fileID: 1059609444}
   - component: {fileID: 1059609443}
   - component: {fileID: 1059609442}
-  - component: {fileID: 1059609440}
   m_Layer: 5
   m_Name: Button (9)
   m_TagString: Untagged
@@ -1940,18 +1861,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -1220}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1059609440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059609438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1059609442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2677,6 +2586,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+  _dragThrehold: 50
 --- !u!1 &1714097224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,7 +2757,6 @@ GameObject:
   - component: {fileID: 1893408635}
   - component: {fileID: 1893408634}
   - component: {fileID: 1893408633}
-  - component: {fileID: 1893408631}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -2875,18 +2784,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -440}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1893408631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893408629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1893408633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3115,7 +3012,6 @@ GameObject:
   - component: {fileID: 1954429094}
   - component: {fileID: 1954429093}
   - component: {fileID: 1954429092}
-  - component: {fileID: 1954429090}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -3143,18 +3039,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -310}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1954429090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954429088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1954429092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,7 +3133,6 @@ GameObject:
   - component: {fileID: 2046613953}
   - component: {fileID: 2046613952}
   - component: {fileID: 2046613951}
-  - component: {fileID: 2046613949}
   m_Layer: 5
   m_Name: Button (7)
   m_TagString: Untagged
@@ -3277,18 +3160,6 @@ RectTransform:
   m_AnchoredPosition: {x: 318.984, y: -960}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2046613949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046613947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5903b43c7ec5341b49455ed199d4addc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2046613951
 MonoBehaviour:
   m_ObjectHideFlags: 0

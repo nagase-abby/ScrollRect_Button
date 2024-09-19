@@ -11,6 +11,12 @@ public class CustomScrollRect : ScrollRect
 
     private GameObject _lastSelectedObj = null;
 
+    private Vector2 _startPoint = Vector2.zero;
+
+    [Header("ボタンタップ時しつつ、スクロールした時にボタンクリックが反応する閾値")]
+    [SerializeField, Range(0.0f, 1000.0f)]
+    private float _dragThrehold = 0;
+
     public override void OnInitializePotentialDrag(PointerEventData eventData)
     {
         var lastObj = EventSystem.current.currentSelectedGameObject;
@@ -23,6 +29,7 @@ public class CustomScrollRect : ScrollRect
         if (lastObj != null)
         {
             _lastSelectedObj = lastObj;
+            _startPoint = eventData.position;
         }
     }
 
@@ -38,7 +45,10 @@ public class CustomScrollRect : ScrollRect
             var raycast = GetFirstRaycast(_raycastResults);
             _raycastResults.Clear();
 
-            NotifyClickEvent(raycast, eventData);
+            if (Vector2.Distance(_startPoint, eventData.position) < _dragThrehold)
+            {
+                NotifyClickEvent(raycast, eventData);
+            }
         }
 
         _lastSelectedObj = null;
@@ -87,7 +97,11 @@ public class CustomScrollRect : ScrollRect
         eventData.eligibleForClick = true;
 
         // イベント実行
-        ExecuteEvents.Execute(eventData.pointerPress, eventData, ExecuteEvents.pointerClickHandler);
+        if (ExecuteEvents.Execute(eventData.pointerPress, eventData, ExecuteEvents.pointerClickHandler))
+        {
+            // イベント発火する場合はスクロールを止める
+            velocity = Vector2.zero;
+        }
     }
 
     private PointerEventData CopyEventData(PointerEventData original)
