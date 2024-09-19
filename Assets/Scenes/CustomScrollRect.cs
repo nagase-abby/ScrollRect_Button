@@ -13,7 +13,7 @@ public class CustomScrollRect : ScrollRect
 
     private Vector2 _startPoint = Vector2.zero;
 
-    [Header("ボタンタップ時しつつ、スクロールした時にボタンクリックが反応する閾値")]
+    [Header("ボタンタップしつつ、スクロールした時にボタンクリックが反応できるまでの距離閾値")]
     [SerializeField, Range(0.0f, 1000.0f)]
     private float _dragThrehold = 0;
 
